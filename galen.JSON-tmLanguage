@@ -1,0 +1,70 @@
+{
+  "name": "Galen",
+  "scopeName": "text.galen",
+  "fileTypes": ["spec"],
+  "repository": {
+    "general": {
+      "patterns": [
+        {
+          "match": "^\\s*#.*",
+          "name": "comment.line.number-sign.galen"
+        }
+      ]
+    }
+  },
+  "patterns": [
+    {
+      "include": "#general"
+    },
+    {
+      "match": "^\\s*@@\\s",
+      "name": "keyword.operator.galen"
+    },
+    {
+      "match": "\\b(set|import)\\b",
+      "name": "support.function.galen"
+    },
+    {
+      "match": "^(@)[^@] ?([\\*\\^]|(([\\w\\-])+ ?))\\| *(([\\w\\-])+(, *)?)*",
+      "captures": {
+        "1": { "name": "keyword.operator.galen" },
+        "2": { "name": "string.unquoted.galen" }
+      }
+    },
+    {
+      "match": "\\b(near|below|above|inside( partly)?|width|height|aligned( horizontally(?! (left|right))| vertically(?! (top| bottom))) (all|centered|top|bottom|left|right)|text (is|contains|starts|ends|matches)|css .* (is|starts|ends|contains|matches)|centered (horizontally|vertically|all) (inside|on)|absent|visible|contains( partly)?|on (top|bottom) (left|right)|component|color scheme|image):",
+      "captures": {
+        "1": { "name": "support.other.galen" }
+      },
+      "comment": "Specs"
+    },
+    {
+      "begin": "^=+\n",
+      "end": "^=+",
+      "name": "meta.object-definition.galen",
+      "patterns": [
+        {
+          "include": "#general"
+        },
+        {
+          "match": "\\b(css|id|xpath)\\b",
+          "name": "keyword.other.galen",
+          "comment": "Locater type"
+        },
+        {
+          "match": "\\s(@)\\(((-|\\+|=)?\\d+), ?((-|\\+|=)?\\d+), ?((-|\\+|=)?\\d+), ?((-|\\+|=)?\\d+)\\)\\s",
+          "captures": {
+            "1": { "name": "support.function.galen" },
+            "2": { "name": "variable.parameter.galen" },
+            "4": { "name": "variable.parameter.galen" },
+            "6": { "name": "variable.parameter.galen" },
+            "8": { "name": "variable.parameter.galen" }
+          },
+          "comment": "Object corrections"
+        }
+      ],
+      "comment": "Object definition"
+    }
+  ],
+  "uuid": "a41f12d9-d823-4cb7-9869-508f9a191632"
+}
