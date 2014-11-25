@@ -42,9 +42,10 @@ If you need highlighting for non-js test suites (`.test`), open an issue.
 
 ## License
 
-Code copyright 2014 Professant LLC. Code released under [the MIT License].
+Code copyright 2014 Professant LLC. Code released under [the MIT License][license].
 
 [galen]: http://galenframework.com
 [pkgcontrol]: https://sublime.wbond.net
 [pkgcontrol-install]: https://sublime.wbond.net/installation
 [zip]: https://github.com/professant/sublime-galen/archive/master.zip
+[license]: https://github.com/professant/sublime-galen/blob/master/LICENSE
