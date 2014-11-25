@@ -1,4 +1,4 @@
-# Project Name
+# Sublime Galen
 
 Basic syntax highlighting for the [Galen Framework][galen], a Selenium based e2e testing solution with JavaScript compatibility.
 
