@@ -47,4 +47,4 @@ Code copyright 2014 Professant LLC. Code released under [the MIT License].
 [galen]: http://galenframework.com
 [pkgcontrol]: https://sublime.wbond.net
 [pkgcontrol-install]: https://sublime.wbond.net/installation
-[zip]: https://github.com/serquhart/sublime-galen/archive/master.zip
+[zip]: https://github.com/professant/sublime-galen/archive/master.zip
