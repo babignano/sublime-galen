@@ -37,8 +37,8 @@ If you need highlighting for non-js test suites (`.test`), open an issue.
 
 **Shawn Erquhart**
 
-- <https://twitter.com/serquhart>
-- <https://github.com/serquhart>
+- <https://twitter.com/erquhart>
+- <https://github.com/erquhart>
 
 ## License
 
