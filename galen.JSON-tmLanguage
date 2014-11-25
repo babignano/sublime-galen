@@ -25,11 +25,16 @@
       "name": "support.function.galen"
     },
     {
-      "match": "^(@)[^@] ?([\\*\\^]|(([\\w\\-])+ ?))\\| *(([\\w\\-])+(, *)?)*",
+      "match": "(^@[^@]) *(?:(?:([*^])|(.[^|]+)) *(\\|) *(?:([*^])|[-\\w, ]+)|(?:([*^])|[-\\w, ]+))?",
       "captures": {
         "1": { "name": "keyword.operator.galen" },
-        "2": { "name": "string.unquoted.galen" }
-      }
+        "2": { "name": "support.variable.galen" },
+        "3": { "name": "string.unquoted.galen" },
+        "4": { "name": "keyword.operator.galen" },
+        "5": { "name": "support.variable.galen" },
+        "6": { "name": "support.variable.galen" }
+      },
+      "comment": "Section title and tags"
     },
     {
       "match": "\\b(near|below|above|inside( partly)?|width|height|aligned( horizontally(?! (left|right))| vertically(?! (top| bottom))) (all|centered|top|bottom|left|right)|text (is|contains|starts|ends|matches)|css .* (is|starts|ends|contains|matches)|centered (horizontally|vertically|all) (inside|on)|absent|visible|contains( partly)?|on (top|bottom) (left|right)|component|color scheme|image):",
@@ -52,13 +57,13 @@
           "comment": "Locater type"
         },
         {
-          "match": "\\s(@)\\(((-|\\+|=)?\\d+), ?((-|\\+|=)?\\d+), ?((-|\\+|=)?\\d+), ?((-|\\+|=)?\\d+)\\)\\s",
+          "match": "\\s(@)\\(((?:-|\\+|=)?\\d+), ?((?:-|\\+|=)?\\d+), ?((?:-|\\+|=)?\\d+), ?((?:-|\\+|=)?\\d+)\\)\\s",
           "captures": {
             "1": { "name": "support.function.galen" },
             "2": { "name": "variable.parameter.galen" },
+            "3": { "name": "variable.parameter.galen" },
             "4": { "name": "variable.parameter.galen" },
-            "6": { "name": "variable.parameter.galen" },
-            "8": { "name": "variable.parameter.galen" }
+            "5": { "name": "variable.parameter.galen" }
           },
           "comment": "Object corrections"
         }
